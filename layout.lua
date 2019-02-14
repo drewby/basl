@@ -12,6 +12,7 @@ local layout = {}
 local function do_basl(p)
     local wa = p.workarea
     local cls = p.clients
+    local tag = p.tag 
     local debug_msg = false
 
     if #cls > 0 then
@@ -23,12 +24,12 @@ local function do_basl(p)
         local colsw = { math.ceil(wa.width * 0.25), math.ceil(wa.width * 0.5), math.ceil(wa.width * 0.25) }
 
         local matrix = {
-            [1] = { 2, 2 },
-            [2] = { 2, 1 },
-            [3] = { 2, 3 },
-            [4] = { 1, 2 },
-            [5] = { 1, 1 },
-            [6] = { 1, 3 },
+            [6] = { 2, 2 },
+            [5] = { 2, 1 },
+            [4] = { 2, 3 },
+            [3] = { 1, 2 },
+            [2] = { 1, 1 },
+            [1] = { 1, 3 },
         }
         
         if debug_msg then
